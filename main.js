@@ -10,8 +10,6 @@ slider.addEventListener('mousedown', (e) => {
   slider.classList.add('active')
   startX = e.pageX - slider.offsetLeft
   scrollLeft = slider.scrollLeft
-  console.log(scrollLeft)
-  console.log(startX)
 })
 
 slider.addEventListener('mouseleave', (e) => {
@@ -28,12 +26,8 @@ slider.addEventListener('mouseup', (e) => {
 
 slider.addEventListener('mousemove', (e) => {
   if (!isDown) return
-  console.log(isDown)
-  console.log("Do Work")
-  console.log(startX)
   e.preventDefault()
   const x = e.pageX - slider.offsetLeft
-  console.log(x, startX)
   const walk = x - startX
-  console.log(walk)
+  slider.scrollLeft = scrollLeft - walk
 })
