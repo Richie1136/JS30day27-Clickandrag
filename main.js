@@ -31,4 +31,6 @@ slider.addEventListener('mousemove', (e) => {
   console.log(isDown)
   console.log("Do Work")
   console.log(startX)
+  e.preventDefault()
+  const x = e.pageX - slider.offsetLeft
 })
