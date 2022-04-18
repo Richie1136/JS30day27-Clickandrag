@@ -33,4 +33,7 @@ slider.addEventListener('mousemove', (e) => {
   console.log(startX)
   e.preventDefault()
   const x = e.pageX - slider.offsetLeft
+  console.log(x, startX)
+  const walk = x - startX
+  console.log(walk)
 })
